@@ -108,6 +108,7 @@ export default function TabOneScreen() {
         setSuggestions([]);
         setShowSuggestions(false);
         setNoResults(false);
+        fetchItems();
       }
     } catch (error) {
       console.error('Error adding item:', error);
@@ -142,6 +143,7 @@ export default function TabOneScreen() {
         setSuggestions([]);
         setShowSuggestions(false);
         setNoResults(false);
+        fetchItems();
       }
     } catch (error) {
       console.error('Error adding custom item:', error);
@@ -156,6 +158,7 @@ export default function TabOneScreen() {
 
       if (response.ok) {
         setItems(items.filter((item) => item.id !== id));
+        fetchItems();
       }
     } catch (error) {
       console.error('Error deleting item:', error);

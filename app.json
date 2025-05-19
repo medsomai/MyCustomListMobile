@@ -17,10 +17,29 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.25"
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "139a482f-63c2-459d-aac1-f4b4dd7a04ce"
+      }
+    },
+    "android": {
+      "package": "com.medsomai.mycustomlist"
     }
   }
 }
